@@ -1,0 +1,64 @@
+@font-face {
+font-family: 'Proxima Nova Light';
+
+src: url('../fonts/ProximaNova/ProximaNova-Light.eot');
+src: url('../fonts/ProximaNova/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+url('../fonts/ProximaNova/ProximaNova-Light.woff') format('woff'),
+url('../fonts/ProximaNova/ProximaNova-Light.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url('../fonts/ProximaNova/ProximaNova-Regular.eot');
+  src: url('../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova/ProximaNova-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('../fonts/ProximaNova/ProximaNova-Bold.eot');
+  src: url('../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova/ProximaNova-Bold.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNova-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Semibold';
+  src: url('../fonts/ProximaNova/ProximaNova-Semibold.eot');
+  src: url('../fonts/ProximaNova/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova/ProximaNova-Semibold.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNova-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin light {
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+}
+
+@mixin bold {
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+}
+
+@mixin regular {
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+}
+
+@mixin semibold {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-weight: 400;
+}
