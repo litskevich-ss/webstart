@@ -1,0 +1,172 @@
+.navbar
+  background-color: rgba(255,255,255,0.85)
+  &__container
+    display: flex
+    align-items: center
+    .nav
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      width: 100%
+    .burger
+      display: none
+      align-items: center
+      .toogle-button
+        display: inline-block
+        width: 50px
+        height: 50px
+        position: relative
+        color: #000
+        cursor: pointer
+        & span, & span:before, & span:after
+          position: absolute
+          top: 50%
+          margin-top: -1px
+          left: 50%
+          display: block
+          margin-left: -10px
+          width: 20px
+          height: 2px
+          background-color: #ffffff
+          transition: 0.3s
+        & span
+          height: 0
+        & span:before,
+        & span:after
+          content: ''
+          margin-top: 0
+        & span:before,
+          transform: rotate(45deg)
+        & span:after,
+          transform: rotate(-45deg)
+        &:hover
+          & span, & span:before, & span:after
+            background: $main-color
+            transition: 0.3s
+      .title
+        display: inline-block
+        display: inline-block
+        font-size: 14px
+        +regular
+        text-transform: uppercase
+  &-nav
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    &__item
+      position: relative
+      margin-right: 38px
+      font-size: 14px
+      &:last-child
+        margin-right: 0
+      a
+        display: inline-block
+        padding-top: 20px
+        height: 55px
+        color: $text-color
+        text-decoration: none
+        +bold
+        &:before, &:after
+          position: absolute
+          width: 0
+          content: ''
+          display: block
+          height: 1px
+          background-color: $text-color
+          bottom: 19px
+        &:after
+          width: 100%
+        &:hover
+          &:after
+            width: 0
+            height: 1px
+            background-color: $text-color
+          &:before
+            width: 100%
+            height: 1px
+            background-color: $main-color
+            transition: 0.4s 
+        &:not( hover )
+          &:after
+            width: 100%
+            height: 1px
+            background-color: $text-color
+            transition: 0.2s 
+          &:before
+            width: 0
+            height: 1px
+            background-color: $main-color
+            transition: 0.2s 
+  .call-me
+    order: 1
+    display: flex
+    flex-direction: column
+    margin-left: auto
+
+@media(max-width: 992px)
+  .navbar 
+    background-color: none
+    background: none
+    color: #ffffff
+    &.collapsed
+      .nav
+        position: absolute
+        display: flex
+        display: none
+      .burger
+        .toogle-button
+          & span
+            height: 2px
+          & span:before
+            display: block
+            margin-top: -6px
+            transform: rotate(0deg)
+          & span:after
+            display: block
+            margin-top: 4px
+            transform: rotate(0deg)
+    &__container
+      display: flex
+      flex-direction: column
+      align-content: center
+      align-items: stretch
+      margin: 0 
+      padding-right: 15px
+      .nav
+        top: 50px
+        padding-left: 35px
+      .burger
+        display: flex
+        /*.title
+          display: inline-block
+          font-size: 14px
+          +regular
+          text-transform: uppercase*/
+    &-nav
+      flex-basis: 100%
+      margin-left: 15px
+      margin-right: 15px
+      margin-top: 15px
+      margin-bottom: 15px
+      border-top: 1px solid #ffffff
+      border-bottom: 1px solid #ffffff
+      &__item
+        width: 100%
+        margin-right: 0
+        & a
+          width: 100%
+          //height: 55px
+          color: #ffffff
+          &:after
+            display: none
+          &:before
+          transition: 0.3s 
+    .call-me
+      position: absolute
+      right: 15px
+      top: 10px
+      display: block
+      margin-right: 15px
+      padding: 0
+      &__text
+        color: #ffffff

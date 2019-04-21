@@ -1,0 +1,1098 @@
+@charset "UTF-8";
+/* Подключаем нормализацию */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Подключаем переменные с цветами */
+/* Подключаем шрифты */
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url("../fonts/ProximaNova/ProximaNova-Light.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Semibold';
+  src: url("../fonts/ProximaNova/ProximaNova-Semibold.eot");
+  src: url("../fonts/ProximaNova/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Подключаем общие стили сайта */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+input:-moz-placeholder {
+  text-align: center;
+}
+
+input::-moz-placeholder {
+  text-align: center;
+}
+
+input:-ms-input-placeholder {
+  text-align: center;
+}
+
+h1, h2, h3, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  height: 60px;
+  font-size: 15px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #22bac1;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #1a9096;
+}
+
+.input {
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e8e8e8;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.input:focus {
+  border: 1px solid #22bac1;
+}
+
+.section {
+  padding: 100px 0 100px 0;
+}
+
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.call-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  min-width: 176px;
+  list-style: none;
+}
+
+.call-me__text {
+  display: inline-block;
+  font-size: 17px;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+
+.call-me__button {
+  color: #22bac1;
+  font-size: 14px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.call-me__button:hover:after {
+  background-color: #23bac1;
+}
+
+.call-me__button:after {
+  content: '';
+  display: block;
+  margin-top: -2px;
+  height: 1px;
+  background-color: #22bac1;
+}
+
+@media (max-width: 768px) {
+  .call-me .section {
+    padding: 50px 0 50px 0;
+  }
+}
+
+/* Подключаем стили для блока navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.navbar__container .burger {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__container .burger .toogle-button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  color: #000;
+  cursor: pointer;
+}
+
+.navbar__container .burger .toogle-button span, .navbar__container .burger .toogle-button span:before, .navbar__container .burger .toogle-button span:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  display: block;
+  margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar__container .burger .toogle-button span {
+  height: 0;
+}
+
+.navbar__container .burger .toogle-button span:before,
+.navbar__container .burger .toogle-button span:after {
+  content: '';
+  margin-top: 0;
+}
+
+.navbar__container .burger .toogle-button span:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.navbar__container .burger .toogle-button span:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.navbar__container .burger .toogle-button:hover span, .navbar__container .burger .toogle-button:hover span:before, .navbar__container .burger .toogle-button:hover span:after {
+  background: #22bac1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar__container .burger .title {
+  display: inline-block;
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+.navbar-nav__item {
+  position: relative;
+  margin-right: 38px;
+  font-size: 14px;
+}
+
+.navbar-nav__item:last-child {
+  margin-right: 0;
+}
+
+.navbar-nav__item a {
+  display: inline-block;
+  padding-top: 20px;
+  height: 55px;
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+}
+
+.navbar-nav__item a:before, .navbar-nav__item a:after {
+  position: absolute;
+  width: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #000000;
+  bottom: 19px;
+}
+
+.navbar-nav__item a:after {
+  width: 100%;
+}
+
+.navbar-nav__item a:hover:after {
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+}
+
+.navbar-nav__item a:hover:before {
+  width: 100%;
+  height: 1px;
+  background-color: #22bac1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navbar-nav__item a:not(hover):after {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.navbar-nav__item a:not(hover):before {
+  width: 0;
+  height: 1px;
+  background-color: #22bac1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.navbar .call-me {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    background-color: none;
+    background: none;
+    color: #ffffff;
+  }
+  .navbar.collapsed .nav {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: none;
+  }
+  .navbar.collapsed .burger .toogle-button span {
+    height: 2px;
+  }
+  .navbar.collapsed .burger .toogle-button span:before {
+    display: block;
+    margin-top: -6px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .navbar.collapsed .burger .toogle-button span:after {
+    display: block;
+    margin-top: 4px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .navbar__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    margin: 0;
+    padding-right: 15px;
+  }
+  .navbar__container .nav {
+    top: 50px;
+    padding-left: 35px;
+  }
+  .navbar__container .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /*.title
+          display: inline-block
+          font-size: 14px
+          @include regular
+          text-transform: uppercase*/
+  }
+  .navbar-nav {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+  }
+  .navbar-nav__item {
+    width: 100%;
+    margin-right: 0;
+  }
+  .navbar-nav__item a {
+    width: 100%;
+    color: #ffffff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .navbar-nav__item a:after {
+    display: none;
+  }
+  .navbar .call-me {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    display: block;
+    margin-right: 15px;
+    padding: 0;
+  }
+  .navbar .call-me__text {
+    color: #ffffff;
+  }
+}
+
+/* Подключаем стили для секции hero */
+.hero {
+  position: relative;
+  background-color: #000000;
+  z-index: 0;
+}
+
+.hero:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/hero/hero-bg.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.hero-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.hero__service {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.hero__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 125px;
+  width: 370px;
+}
+
+.hero .service {
+  color: #fffafa;
+}
+
+.hero .service__title {
+  margin-top: 112px;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 48px;
+  line-height: 60px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+}
+
+.hero .service__subtitle {
+  font-size: 20px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+}
+
+.hero .service-list {
+  padding: 0;
+  margin-top: 62px;
+  margin-bottom: 102px;
+}
+
+.hero .service-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 23px;
+}
+
+.hero .service-list__item img {
+  width: 18px;
+  width: 18px;
+}
+
+.hero .service-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.hero .service-list__item:nth-child(1) {
+  margin-bottom: 22px;
+  max-width: 195px;
+}
+
+.hero .service-list__item:nth-child(2) {
+  margin-bottom: 20px;
+  max-width: 205px;
+}
+
+.hero .service-list__item:nth-child(3) {
+  max-width: 276px;
+}
+
+.hero .service-list__item:nth-child(4) {
+  max-width: 220px;
+}
+
+.hero .service-list__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 25px;
+  min-width: 35px;
+  min-height: 35px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.hero .service-list__text {
+  display: inline-block;
+  font-size: 15px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.hero .form {
+  background-color: #ffffff;
+}
+
+.hero .form__title {
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 36px;
+  margin-bottom: 30px;
+  max-width: 234px;
+  font-size: 18px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+}
+
+.hero .form__title strong {
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+}
+
+.hero .form__input {
+  display: block;
+  margin: 0 55px 15px 55px;
+  color: #7c7c7c;
+  font-size: 13px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+  /*&:last-child
+        margin-bottom: 0*/
+}
+
+.hero .form__button {
+  display: block;
+  margin: 5px 55px 43px 55px;
+  font-size: 13px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+@media (max-width: 922px) {
+  .hero-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero__form {
+    margin-top: 10;
+    width: 100%;
+  }
+  .hero .service__title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 48px;
+  }
+  .hero .service__subtitle {
+    font-size: 20px;
+  }
+  .hero .service-list {
+    margin-top: 62px;
+    margin-bottom: 0;
+  }
+  .hero .service-list__item {
+    margin-bottom: 23px;
+  }
+  .hero .service-list__image {
+    font-size: 16px;
+  }
+  .hero .service-list__text {
+    font-size: 15px;
+  }
+  .hero .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 55px 0 55px;
+    margin-bottom: 15px;
+  }
+  .hero .form__title {
+    margin-top: 36px;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .hero .form__input {
+    display: block;
+    width: 260px;
+  }
+  .hero .form__button {
+    display: block;
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero__form {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .hero .service {
+    margin-left: 30px;
+  }
+  .hero .service__title {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    max-width: 350px;
+    line-height: 1.2;
+  }
+  .hero .service__subtitle {
+    font-size: 18px;
+  }
+  .hero .service-list {
+    margin-top: 40px;
+    margin-bottom: 0;
+    margin-left: 15px;
+  }
+  .hero .service-list__item {
+    margin-bottom: 23px;
+  }
+  .hero .service-list__image {
+    font-size: 16px;
+  }
+  .hero .service-list__text {
+    font-size: 15px;
+  }
+  .hero .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 55px 0 55px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .hero .form__title {
+    margin-top: 36px;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .hero .form__input {
+    display: block;
+    width: 100%;
+  }
+  .hero .form__button {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
