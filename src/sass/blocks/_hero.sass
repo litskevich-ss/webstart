@@ -80,40 +80,17 @@
         font-size: 15px
         +light
         color: #ffffff
-
   .form
-    background-color: #ffffff
-    &__title
-      display: block
-      align-self: center
-      margin-top: 36px
-      margin-bottom: 30px
-      max-width: 234px
-      font-size: 18px
-      +regular
-      color: $text-color
-      text-align: center
-      & strong
-        +bold
-    &__input
-      display: block
-      margin: 0 55px 15px 55px
-      color: #7c7c7c
-      font-size: 13px
-      +light
     &__button
-      display: block
-      margin: 5px 55px 43px 55px
-      font-size: 13px
-      +light
-      color: #ffffff
+      padding: 25px 57px
 
 @media(max-width: 922px)
   .hero
     &-block
       flex-direction: column
     &__form
-      margin-top: 10
+      margin-top: 30px
+      margin-bottom: 15px
       width: 100%
     .service
       &__title
@@ -131,30 +108,21 @@
           font-size: 16px
         &__text
           font-size: 15px
-    .form
-      display: flex
-      flex-direction: column
-      align-items: center
-      padding: 0 55px 0 55px
-      margin-bottom: 15px
-      &__title
-        margin-top: 36px
-        margin-bottom: 30px
-        font-size: 18px
-      &__input
-        display: block
-        width: 260px
-      &__button
-        display: block
-        width: 260px
 
+    .form
+      &__button
+        margin-left: auto
+        margin-right: auto
+        width: 260px
+      &__input
+        margin-left: auto
+        margin-right: auto
+        width: 260px
+    
 @media(max-width: 768px)
   .hero
     &-block
       flex-direction: column
-    &__form
-      margin-top: 10px
-      width: 100%
     .service
       margin-left: 30px
       &__title
@@ -175,22 +143,12 @@
           font-size: 16px
         &__text
           font-size: 15px
+
     .form
-      display: flex
-      flex-direction: column
-      align-items: center
-      padding: 0 55px 0 55px
-      margin-top: 30px
-      margin-bottom: 15px
-      &__title
-        margin-top: 36px
-        margin-bottom: 30px
-        font-size: 18px
-      &__input
-        display: block
-        width: 100%
+      padding-left: 55px
+      padding-right: 55px
       &__button
-        display: block
-        margin-top: 30px
-        margin-bottom: 30px
         width: 100%
+      &__input
+        width: 100%
+    

@@ -157,12 +157,34 @@
   </footer>
 
 
+  <div class="modal" id="modal">
+    <div class="modal-dialog call__dialog">
+      <button class="modal-dialog__close button" id="close">&times;</button>
+      <h4 class="modal-dialog__title">Заказать звонок</h4>
+  
+      <form action="#" class="form modal__form">
+        <input type="text" class="input form__input" placeholder="Ваше имя">
+  
+        <input type="phone" class="input form__input phone" placeholder="Контактный телефон">
+  
+        <input type="text" class="input form__input" placeholder="Электронная почта">
+  
+        <button class="button form__button accept__button" data="msg-1">Оставить заявку</button>
+  
+      </form>
+  
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
   <div id="upTop" class="upTop">
-    <img src="img/to-top.svg" alt="">
+    <img class="img" src="img/to-top.svg" alt="">
   </div>
 
 <script src="https://api-maps.yandex.ru/2.1/?apikey=b6e1ca19-72ee-44aa-8650-0036175e5276&lang=ru_RU" type="text/javascript"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/main.js"></script>
 <script>
 

@@ -1,24 +1,24 @@
 $(document).ready(function () {
 
-/* Плавно прокручиваем страницу вверх*/
-$('#upTop').click(function () {
-  $('html, body').animate({
-    scrollTop: 0
-  }, 500);
-  return false;
-});
+  /* Плавно прокручиваем страницу вверх*/
+  $('#upTop').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
 
-/* Скрываем иконку прокрутки вверх при открытии страницы*/
-$('.upTop').hide();
+  /* Скрываем иконку прокрутки вверх при открытии страницы*/
+  $('.upTop').hide();
 
-/* Плавно отображаем иконку при прокрктке вниз и скрываем при прокрутке вверх*/
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 100) {
-    $('.upTop').fadeIn();
-  } else {
-    $('.upTop').fadeOut();
-  }
-});
+  /* Плавно отображаем иконку при прокрктке вниз и скрываем при прокрутке вверх*/
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('.upTop').fadeIn();
+    } else {
+      $('.upTop').fadeOut();
+    }
+  });
 
   /* Скрипт для мобильного меню */
   $('.toogle-button').click(function () {
@@ -28,7 +28,46 @@ $(window).scroll(function () {
     $('.navbar').toggleClass('collapsed');
   });
 
+  /* Мрдальное окно */
+  var modal = $('#modal');
+  var closeModalButton = $('#close');
+  var actionButton = $('.modal__button');
+
+  actionButton.on('click', function () {
+    var modalType = $(this).data('modal-type');
+
+    switch (modalType) {
+      case 'modal-1':
+        $('#modal').find('.modal-dialog__title').html('Заказать обратный звонок');
+        $('#modal').find('.accept__button').html('Заказать');
+        break;
+      case 'modal-2':
+        $('#modal').find('.modal-dialog__title').html('Заявка на расчет стоимости макета');
+        $('#modal').find('.accept__button').html('Оставить заявку');
+        break;
+      case 'modal-3':
+        $('#modal').find('.modal-dialog__title').html('Рассчитать стоимость макета');
+        $('#modal').find('.accept__button').html('Рассчитать');
+        break;
+      case 'modal-4':
+        $('#modal').find('.modal-dialog__title').html('Заказать макет');
+        $('#modal').find('.accept__button').html('Заказать');
+        break;
+    }
+
+    modal.addClass('modal_active');
+  });
+
+  closeModalButton.on('click', function () {
+    modal.removeClass('modal_active');
+  });
+
+  /* Маска для телефона*/
+  $('.phone').mask('+7 (999) 999-99-99');
+
 });
+
+
 
 /* Инициаизация yandex карты */
 ymaps.ready(init);
