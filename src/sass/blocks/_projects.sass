@@ -1,0 +1,180 @@
+.projects
+  padding: 90px 0 90px 0
+  text-align: center
+  background-color: $section-bg-color
+  &__title
+    margin-bottom: 64px
+    color: $text-color
+    font-size: 36px
+    +regular
+  &__subtitle
+    //margin-bottom: 99px
+    max-width: 760px
+    color: $text-color
+    font-size: 20px
+    +light
+  &__slider
+    margin-top: 96px
+    margin-bottom: 10px
+    
+  .slider
+    padding: 0 145px 0 135px
+    text-align: left
+    &__prev
+      left: -6px
+    &__next
+      right: -6px
+    &__item
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      
+      //.item-container
+        
+        //width: 896px
+        //height: 340px
+    &__image
+      //flex-basis: 50%
+      //height: 340px
+    .project
+      //flex-basis: 50%
+      &-info
+        padding-left: 87px
+        &__title
+          margin-bottom: 46px
+          color: $text-color
+          font-size: 24px
+          +regular
+        &__subtitle
+          display: inline-block
+          max-width: 402px
+          color: $text-color
+          font-size: 16px
+          line-height: 20px
+          +light
+          .caption
+            display: block
+            margin-bottom: 7px
+            color: $text-color-light
+            font-size: 12px
+            line-height: 20px
+            +light
+        &__button
+          margin-top: 60px
+          margin-left: -3px
+          width: 216px
+          background-color: $main-color
+          z-index: 5000
+      &-details
+        display: flex
+        justify-content: space-between
+        margin-top: 53px
+        width: 402px
+        &__item
+          display: flex
+          flex-direction: column
+          color: $text-color
+          font-size: 16px
+          line-height: 20px
+          +light
+          .caption
+            margin-bottom: 7px
+            color: $text-color-light
+            font-size: 12px
+            line-height: 20px
+            +light
+
+@media(max-width: 768px)
+  .projects
+    padding: 90px 0 90px 0
+    text-align: center
+    background-color: $section-bg-color
+    &__title
+      margin-bottom: 64px
+      color: $text-color
+      font-size: 36px
+      +regular
+    &__subtitle
+      //margin-bottom: 99px
+      max-width: 760px
+      color: $text-color
+      font-size: 20px
+      +light
+    &__slider
+      margin-top: 96px
+      margin-bottom: 10px
+      width: 100%
+      
+    .slider
+      widows: 100%
+      padding: 0
+      //padding: 0 145px 0 135px
+      text-align: left
+      &__prev
+        left: 0px
+      &__next
+        right: 0px
+      &__item
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        
+        //.item-container
+          
+          //width: 896px
+          //height: 340px
+      &__image
+        width: 50%
+        margin: auto
+        //flex-basis: 100%
+        //height: 340px
+      .project
+        width: 100%
+        //flex-basis: 100%
+        &-info
+          padding-left: 87px
+          &__title
+            margin-bottom: 46px
+            color: $text-color
+            font-size: 24px
+            +regular
+          &__subtitle
+            display: inline-block
+            max-width: 402px
+            color: $text-color
+            font-size: 16px
+            line-height: 20px
+            +light
+            .caption
+              display: block
+              margin-bottom: 7px
+              color: $text-color-light
+              font-size: 12px
+              line-height: 20px
+              +light
+          &__button
+            margin-top: 60px
+            margin-left: -3px
+            width: 216px
+            background-color: $main-color
+            z-index: 5000
+        &-details
+          display: flex
+          justify-content: space-between
+          margin-top: 53px
+          width: 402px
+          &__item
+            display: flex
+            flex-direction: column
+            color: $text-color
+            font-size: 16px
+            line-height: 20px
+            +light
+            .caption
+              margin-bottom: 7px
+              color: $text-color-light
+              font-size: 12px
+              line-height: 20px
+              +light

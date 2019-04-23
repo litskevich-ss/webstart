@@ -26,8 +26,6 @@
     margin-right: 30px
     &:nth-child(3n+3)
       margin-right: 0
-    &:last-child
-      margin-bottom: 0
     &__title
       position: relative
       margin-top: 33px
@@ -54,7 +52,6 @@
         filter: grayscale(1)
     &__list
       padding: 0
-      //margin-bottom: 30px
       list-style: none
       line-height: 35px
     &-list
@@ -89,11 +86,8 @@
       position: relative
       display: flex
       justify-content: space-between
-      //justify-content: center
       align-items: flex-start
       flex-wrap: wrap
-      //max-width: 1170px
-      //margin: auto
     &:hover
       cursor: pointer
       box-shadow: 0 5px 32px rgba(0, 0, 0, 0.1)
@@ -143,23 +137,44 @@
 
 @media(max-width: 768px)
   .layouts
+    padding: 50px 0 0 0
+    &__title
+      margin-bottom: 30px
+      font-size: 32px
+    &__subtitle
+      margin-bottom: 40px
+      font-size: 18px
     .card
       &__title
-        margin-top: 15px
-        margin-bottom: 20px
+        margin-top: 40px
+        margin-bottom: 40px
         font-size: 18px
       &__button
-        margin-bottom: 20px
+        margin-bottom: 40px
+      & img
+        width: 80%
 
 @media(max-width: 320px)
   .layouts
+    padding: 35px 0 0 0
+    &__title
+      margin-bottom: 30px
+      font-size: 28px
+    &__subtitle
+      margin-bottom: 40px
+      font-size: 18px
     .card
+      margin-bottom: 15px
       &__title
-        margin-top: 15px
+        margin-top: 25px
         margin-bottom: 20px
         font-size: 18px
       &__button
-        margin-bottom: 15px
+        margin-bottom: 25px
         font-size: 13px
+      & img
+        width: 100%
+      &:hover
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
 
 

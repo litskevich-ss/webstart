@@ -399,11 +399,6 @@ h1, h2, h3, ul, li {
   padding: 0;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-}
-
 .button {
   padding: 5px 15px;
   font-size: 15px;
@@ -704,6 +699,25 @@ div.invalid {
 }
 
 @media (max-width: 768px) {
+  .modal-dialog {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+  }
+  .modal__form {
+    min-width: 100%;
+  }
+  .modal .form__input {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .modal .form__button {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 320px) {
   .modal-dialog {
     margin-left: 15px;
     margin-right: 15px;
@@ -1272,10 +1286,6 @@ div.invalid {
   margin-right: 0;
 }
 
-.layouts .card:last-child {
-  margin-bottom: 0;
-}
-
 .layouts .card__title {
   position: relative;
   margin-top: 33px;
@@ -1443,26 +1453,68 @@ div.invalid {
 }
 
 @media (max-width: 768px) {
+  .layouts {
+    padding: 50px 0 0 0;
+  }
+  .layouts__title {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+  .layouts__subtitle {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
   .layouts .card__title {
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-size: 18px;
   }
   .layouts .card__button {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+  }
+  .layouts .card img {
+    width: 80%;
   }
 }
 
 @media (max-width: 320px) {
+  .layouts {
+    padding: 35px 0 0 0;
+  }
+  .layouts__title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  .layouts__subtitle {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  .layouts .card {
+    margin-bottom: 15px;
+  }
   .layouts .card__title {
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 20px;
     font-size: 18px;
   }
   .layouts .card__button {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-size: 13px;
   }
+  .layouts .card img {
+    width: 100%;
+  }
+  .layouts .card:hover {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Подключаем стили для секции projects */
+/* Подключаем стили для секции сдшутеы */
+.clients .slider {
+  width: 100%;
+  border: 1px solid red;
 }
 
 /* Подключаем стили для секции footer */
@@ -1562,4 +1614,3 @@ div.invalid {
     color: #ffffff;
   }
 }
-/*# sourceMappingURL=style.css.map */
