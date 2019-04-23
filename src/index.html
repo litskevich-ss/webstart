@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
   <title>Изготовление макетов</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  
+
   <header class="hero">
-  
+
     <div class="navbar collapsed">
-  
+
       <div class="container navbar__container">
 
         <div class="burger">
@@ -21,7 +23,7 @@
           </div>
           <span class="title">Меню</span>
         </div>
-  
+
         <ul class="call-me">
           <li><a href="tel:88008913333" class="call-me__text">8 800 891-33-33</a></li>
           <li><a href="#" class="call-me__button modal__button" data-modal-type="modal-1">Заказать обратный звонок</a>
@@ -64,7 +66,7 @@
 
     </div>
     <!-- /.navbar -->
-  
+
     <div class="container">
       <div class="hero-block">
         <div class="service hero__service">
@@ -105,22 +107,22 @@
           <!-- /.service-list -->
         </div>
         <!-- /.service hero__service -->
-  
-        <form action="#" class="form hero__form">
+
+        <form action="mail.php" method="POST" class="form hero__form" id="request-form">
           <h2 class="form__title"> Оставьте заявку и получите расчет стоимость макета в течение <strong>30
               минут</strong></h2>
           <!-- /.hero__title -->
-          <input type="text" class="input form__input" placeholder="Ваше имя">
+          <input type="text" name="user_name" class="input form__input" placeholder="Ваше имя">
           <!-- /.hero__input -->
-          <input type="text" class="input form__input" placeholder="Контактный телефон">
+          <input type="phone" name="user_phone" class="input form__input phone" placeholder="Контактный телефон">
           <!-- /.hero__input -->
-          <input type="text" class="input form__input" placeholder="Электронная почта">
+          <input type="email" name="user_email" class="input form__input" placeholder="Электронная почта">
           <!-- /.hero__input -->
-          <button class="button form__button modal__button" data-modal-type="modal-2">Оставить заявку</button>
+          <button class="button form__button">Оставить заявку</button>
           <!-- /.form .hero__button -->
         </form>
         <!-- /hero__form -->
-  
+
       </div>
       <!-- /.hero-block -->
     </div>
@@ -128,14 +130,136 @@
   </header>
   <!-- /.hero -->
 
+  <main>
+    <section class="section layouts">
+      <div class="container">
+        <h2 class="section-title layouts__title" id="layouts">Виды макетов</h2>
+        <!-- /.section-title layouts__title -->
+        <span class="section-subtitle layouts__subtitle">Создаем макеты от небольших домов до космических станций</span>
+        <!-- /.layouts__subtitle -->
+        <div class="cards">
+          <div class="card layouts__card">
+            <h3 class="card__title">Архитектурные макеты</h3>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="img/layouts/img-1.jpg" alt="Архитектурные макеты"></div>
+            <!-- /.card__image -->
+            <ul class="card-list card__list">
+              <li class="card-list__item">Многоэтажные дома</li>
+              <li class="card-list__item">Жилые комплексы</li>
+              <li class="card-list__item">Коттеджные поселки</li>
+              <li class="card-list__item">Торговые комплексы</li>
+              <li class="card-list__item">Бизнес – парки</li>
+              <li class="card-list__item">Административные здания</li>
+              <li class="card-list__item">Гостиницы и санатории</li>
+            </ul>
+            <!-- /.card-list card__list -->
+            <button class="button card__button modal__button" data-modal-type="modal-3">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card layouts__card -->
+          <div class="card layouts__card">
+            <h3 class="card__title">Градостроительные макеты</h3>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="img/layouts/img-2.jpg" alt="Градостроительные макеты"></div>
+            <!-- /.card__image -->
+            <ul class="card-list card__list">
+              <li class="card-list__item">Области</li>
+              <li class="card-list__item">Города</li>
+              <li class="card-list__item">Районы</li>
+              <li class="card-list__item">Микрорайоны</li>
+              <li class="card-list__item">Территории</li>
+              <li class="card-list__item">Мосты и тоннели</li>
+            </ul>
+            <!-- /.card-list card__list -->
+            <button class="button card__button modal__button" data-modal-type="modal-3">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card layouts__card -->
+          <div class="card layouts__card">
+            <h3 class="card__title">Промышленные макеты</h3>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="img/layouts/img-3.jpg" alt="Промышленные макеты"></div>
+            <!-- /.card__image -->
+            <ul class="card-list card__list">
+              <li class="card-list__item">Предприятия и фабрики</li>
+              <li class="card-list__item">Энергетические объекты</li>
+              <li class="card-list__item">Заводы</li>
+              <li class="card-list__item">Научные центры</li>
+              <li class="card-list__item">Трубопроводы</li>
+              <li class="card-list__item">Производственные линии</li>
+              <li class="card-list__item">Технологические линии</li>
+            </ul>
+            <!-- /.card-list card__list -->
+            <button class="button card__button modal__button" data-modal-type="modal-3">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card layouts__card -->
+          <div class="card layouts__card">
+            <h3 class="card__title">Интерьерные макеты</h3>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="img/layouts/img-4.jpg" alt="Интерьерные макеты"></div>
+            <!-- /.card__image -->
+            <ul class="card-list card__list">
+              <li class="card-list__item">Квартиры</li>
+              <li class="card-list__item">Офисы</li>
+              <li class="card-list__item">Коттеджи</li>
+              <li class="card-list__item">Магазины</li>
+              <li class="card-list__item">Спортивные комплексы</li>
+              <li class="card-list__item">Торговые центры</li>
+              <li class="card-list__item">Заводы</li>
+            </ul>
+            <!-- /.card-list card__list -->
+            <button class="button card__button modal__button" data-modal-type="modal-3">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card layouts__card -->
+          <div class="card layouts__card">
+            <h3 class="card__title">Ландшафтные макеты</h3>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="img/layouts/img-5.jpg" alt="Ландшафтные макеты"></div>
+            <!-- /.card__image -->
+            <ul class="card-list card__list">
+              <li class="card-list__item">Парки</li>
+              <li class="card-list__item">Сады</li>
+              <li class="card-list__item">Горы</li>
+              <li class="card-list__item">Озера</li>
+              <li class="card-list__item">Рельефы местности</li>
+              <li class="card-list__item">Участки</li>
+            </ul>
+            <!-- /.card-list card__list -->
+            <button class="button card__button modal__button" data-modal-type="modal-3">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card layouts__card -->
+          <div class="card layouts__card">
+            <h3 class="card__title">Индивидуальные макеты</h3>
+            <!-- /.card__title -->
+            <div class="card__image"><img src="img/layouts/img-6.jpg" alt="Индивидуальные макеты"></div>
+            <!-- /.card__image -->
+            <span class="card-text card__text">Мы может воплотить в жизнь любые идеи, с применением высоких технологий,
+              максимальной детализацией
+              и совершенно любых размеров</span>
+            <!-- /.card-text card__text -->
+            <button class="button card__button modal__button" data-modal-type="modal-3">Рассчитать стоимость</button>
+            <!-- /.button card__button -->
+          </div>
+          <!-- /.card layouts__card -->
+        </div>
+        <!-- /.cards -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section layouts -->
+  </main>
+
 
   <footer class="footer">
     <a name="footer"></a>
-    
+
     <div class="footer__map" id="map"></div>
-  
+
     <div class="container">
-  
+
       <div class="footer__contacts">
         <div class="footer__address" id="contacts">
           <img src="img/footer/placeholder.svg" alt="">
@@ -153,7 +277,7 @@
       <!-- /.footer__contacts -->
     </div>
     <!-- /.container -->
-  
+
   </footer>
 
 
@@ -161,18 +285,18 @@
     <div class="modal-dialog call__dialog">
       <button class="modal-dialog__close button" id="close">&times;</button>
       <h4 class="modal-dialog__title">Заказать звонок</h4>
-  
-      <form action="#" class="form modal__form">
-        <input type="text" class="input form__input" placeholder="Ваше имя">
-  
-        <input type="phone" class="input form__input phone" placeholder="Контактный телефон">
-  
-        <input type="text" class="input form__input" placeholder="Электронная почта">
-  
+
+      <form action="mail.php" method="POST" class="form modal__form" id="modal-form">
+        <input type="text" name="user_name" class="input form__input" placeholder="Ваше имя">
+
+        <input type="phone" name="user_phone" class="input form__input phone" placeholder="Контактный телефон">
+
+        <input type="email" name="user_email" class="input form__input" placeholder="Электронная почта">
+
         <button class="button form__button accept__button" data="msg-1">Оставить заявку</button>
-  
+
       </form>
-  
+
     </div>
     <!-- /.modal-dialog -->
   </div>
@@ -182,14 +306,18 @@
     <img class="img" src="img/to-top.svg" alt="">
   </div>
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=b6e1ca19-72ee-44aa-8650-0036175e5276&lang=ru_RU" type="text/javascript"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery.maskedinput.min.js"></script>
-<script src="js/main.js"></script>
-<script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=b6e1ca19-72ee-44aa-8650-0036175e5276&lang=ru_RU"
+    type="text/javascript"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
 
- 
-</script>
+
+  </script>
 
 </body>
+
 </html>

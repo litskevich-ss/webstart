@@ -28,7 +28,7 @@ $(document).ready(function () {
     $('.navbar').toggleClass('collapsed');
   });
 
-  /* Мрдальное окно */
+  /* Модальное окно */
   var modal = $('#modal');
   var closeModalButton = $('#close');
   var actionButton = $('.modal__button');
@@ -65,7 +65,73 @@ $(document).ready(function () {
   /* Маска для телефона*/
   $('.phone').mask('+7 (999) 999-99-99');
 
+  /* Валидация форм */
+  $('#request-form').validate({
+
+    rules: {
+      user_name: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      user_phone: {
+        required: true
+      },
+      user_email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      user_name: {
+        required: "Заполните поле",
+        minlength: "Поле должно содержать минимум 2 символа",
+        maxlength: "Поле не должно превышать 15 символов"
+      },
+      user_phone: "Заполните поле",
+      user_email: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+
+  $('#modal-form').validate({
+
+    rules: {
+      user_name: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      user_phone: {
+        required: true
+      },
+      user_email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      user_name: {
+        required: "Заполните поле",
+        minlength: "Поле должно содержать минимум 2 символа",
+        maxlength: "Поле не должно превышать 15 символов"
+      },
+      user_phone: "Заполните поле",
+      user_email: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+
 });
+
 
 
 

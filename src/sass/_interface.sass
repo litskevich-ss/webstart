@@ -43,6 +43,18 @@ img
     font-size: 13px
     +light
 
+.input
+  &.invalid
+    margin-bottom: 0
+    border: 1px solid #e13e42
+div.invalid
+  display: block
+  margin: 5px auto
+  line-height: 15px
+  +bold
+  font-size: 13px
+  color: #e13e42
+
 .form
   display: flex
   flex-direction: column
@@ -127,6 +139,28 @@ img
     width: 20px
     height: 20px
 
+.thank-you
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 400px
+  height: 300px
+  margin: 100px auto
+  border: 1px solid #c8c8c8
+  font-size: 24px
+  +bold
+  text-align: center
+  .button
+    margin-top: 30px
+    padding: 15px 25px
+    +light
+    color: #ffffff
+
+
   @media(max-width: 768px)
     .section
       padding: 50px 0 50px 0
+    
+    .thank-you
+      width: 90%

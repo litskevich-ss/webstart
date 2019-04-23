@@ -1,0 +1,165 @@
+.layouts
+  padding: 90px 0 0 0
+  color: $text-color
+  text-align: center
+  &__title
+    margin-top: 5px
+    margin-bottom: 60px
+    font-size: 36px
+    +regular
+
+  &__subtitle
+    display: block
+    margin-bottom: 75px
+    color: $text-color
+    font-size: 20px
+    +light
+    
+  .card
+    display: flex
+    flex-direction: column
+    margin-bottom: 30px
+    width: 370px
+    min-height: 680px
+    background-color: $bg-color
+    text-align: center
+    margin-right: 30px
+    &:nth-child(3n+3)
+      margin-right: 0
+    &:last-child
+      margin-bottom: 0
+    &__title
+      position: relative
+      margin-top: 33px
+      margin-bottom: 24px
+      color: $text-color
+      font-size: 20px
+      +regular
+    &__button
+      display: inline-block
+      margin-top: auto
+      margin-bottom: 40px
+      margin-left: 70px
+      margin-right: 70px
+      min-height: 55px
+      border: 1px solid #aeaeae
+      color: $text-color
+      background-color: #ffffff
+      &:hover
+        color: #ffffff
+    &__image
+      margin-left: 35px
+      margin-right: 35px
+      & img
+        filter: grayscale(1)
+    &__list
+      padding: 0
+      //margin-bottom: 30px
+      list-style: none
+      line-height: 35px
+    &-list
+      display: inline-block
+      padding-top: 16px
+      min-height: 280px
+      &__item
+        position: relative
+        color: #000000
+        font-size: 16px
+        +light
+        line-height: 35px
+        &:before
+          position: absolute
+          left: 50%
+          margin-top: 35px
+          transform: translateX(-50%)
+          width: 9px
+          height: 2px
+          background-color: #23bac1
+          content: ''
+    &__text
+      display: block
+      max-width: 234px
+      color: #000000
+      font-size: 16px
+      +light
+      line-height: 21px
+      margin: 35px auto 5px auto
+      min-height: 240px
+    &s
+      position: relative
+      display: flex
+      justify-content: space-between
+      //justify-content: center
+      align-items: flex-start
+      flex-wrap: wrap
+      //max-width: 1170px
+      //margin: auto
+    &:hover
+      cursor: pointer
+      box-shadow: 0 5px 32px rgba(0, 0, 0, 0.1)
+      transition: 0.3s
+      .card:before
+        opacity: 1
+      & .card__image
+        & img
+          filter: grayscale(0)
+      & .button
+          margin-top: auto
+          color: #ffffff
+          background-color: #23bac1
+          border: none
+          transition: 0.3s
+          &:before
+            opacity: 1
+
+@media(max-width: 1200px)
+  .layouts
+    .card
+      margin-right: 30px
+      &:nth-child(3n)
+        margin-right: 30px
+      &:nth-child(2n)
+        margin-right: 0
+      &s
+        justify-content: center
+
+@media(max-width: 922px)
+  .layouts
+    .card
+      margin-right: 0
+      width: 100%
+      height: auto
+      min-height: auto
+      &:nth-child(3n)
+        margin-right: 0
+      &:nth-child(2n)
+        margin-right: 0
+      &__button
+        width: 70%
+        margin-left: auto
+        margin-right: auto
+      & img
+        width: 70%
+
+@media(max-width: 768px)
+  .layouts
+    .card
+      &__title
+        margin-top: 15px
+        margin-bottom: 20px
+        font-size: 18px
+      &__button
+        margin-bottom: 20px
+
+@media(max-width: 320px)
+  .layouts
+    .card
+      &__title
+        margin-top: 15px
+        margin-bottom: 20px
+        font-size: 18px
+      &__button
+        margin-bottom: 15px
+        font-size: 13px
+
+

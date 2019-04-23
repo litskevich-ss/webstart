@@ -467,6 +467,21 @@ img {
   font-weight: 300;
 }
 
+.input.invalid {
+  margin-bottom: 0;
+  border: 1px solid #e13e42;
+}
+
+div.invalid {
+  display: block;
+  margin: 5px auto;
+  line-height: 15px;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #e13e42;
+}
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -600,9 +615,44 @@ img {
   height: 20px;
 }
 
+.thank-you {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 300px;
+  margin: 100px auto;
+  border: 1px solid #c8c8c8;
+  font-size: 24px;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.thank-you .button {
+  margin-top: 30px;
+  padding: 15px 25px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
 @media (max-width: 768px) {
-  .upTop .section {
+  .thank-you .section {
     padding: 50px 0 50px 0;
+  }
+  .thank-you .thank-you {
+    width: 90%;
   }
 }
 
@@ -646,7 +696,7 @@ img {
 }
 
 .modal__form {
-  width: 370px;
+  min-width: 370px;
 }
 
 .modal .form__button {
@@ -660,7 +710,15 @@ img {
     width: 100%;
   }
   .modal__form {
-    width: 100%;
+    min-width: 100%;
+  }
+  .modal .form__input {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .modal .form__button {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
@@ -1167,6 +1225,243 @@ img {
   }
   .hero .form__input {
     width: 100%;
+  }
+}
+
+/* Подключаем стили для секции layouts */
+.layouts {
+  padding: 90px 0 0 0;
+  color: #000000;
+  text-align: center;
+}
+
+.layouts__title {
+  margin-top: 5px;
+  margin-bottom: 60px;
+  font-size: 36px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+}
+
+.layouts__subtitle {
+  display: block;
+  margin-bottom: 75px;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+}
+
+.layouts .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+  width: 370px;
+  min-height: 680px;
+  background-color: #ffffff;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.layouts .card:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+.layouts .card:last-child {
+  margin-bottom: 0;
+}
+
+.layouts .card__title {
+  position: relative;
+  margin-top: 33px;
+  margin-bottom: 24px;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+}
+
+.layouts .card__button {
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: 40px;
+  margin-left: 70px;
+  margin-right: 70px;
+  min-height: 55px;
+  border: 1px solid #aeaeae;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.layouts .card__button:hover {
+  color: #ffffff;
+}
+
+.layouts .card__image {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.layouts .card__image img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.layouts .card__list {
+  padding: 0;
+  list-style: none;
+  line-height: 35px;
+}
+
+.layouts .card-list {
+  display: inline-block;
+  padding-top: 16px;
+  min-height: 280px;
+}
+
+.layouts .card-list__item {
+  position: relative;
+  color: #000000;
+  font-size: 16px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+  line-height: 35px;
+}
+
+.layouts .card-list__item:before {
+  position: absolute;
+  left: 50%;
+  margin-top: 35px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 9px;
+  height: 2px;
+  background-color: #23bac1;
+  content: '';
+}
+
+.layouts .card__text {
+  display: block;
+  max-width: 234px;
+  color: #000000;
+  font-size: 16px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+  line-height: 21px;
+  margin: 35px auto 5px auto;
+  min-height: 240px;
+}
+
+.layouts .cards {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.layouts .card:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 32px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 32px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.layouts .card:hover .card:before {
+  opacity: 1;
+}
+
+.layouts .card:hover .card__image img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.layouts .card:hover .button {
+  margin-top: auto;
+  color: #ffffff;
+  background-color: #23bac1;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.layouts .card:hover .button:before {
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .layouts .card {
+    margin-right: 30px;
+  }
+  .layouts .card:nth-child(3n) {
+    margin-right: 30px;
+  }
+  .layouts .card:nth-child(2n) {
+    margin-right: 0;
+  }
+  .layouts .cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 922px) {
+  .layouts .card {
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+  }
+  .layouts .card:nth-child(3n) {
+    margin-right: 0;
+  }
+  .layouts .card:nth-child(2n) {
+    margin-right: 0;
+  }
+  .layouts .card__button {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .layouts .card img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .layouts .card__title {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .layouts .card__button {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .layouts .card__title {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .layouts .card__button {
+    margin-bottom: 15px;
+    font-size: 13px;
   }
 }
 
