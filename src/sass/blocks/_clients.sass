@@ -1,14 +1,30 @@
 .clients
-  //padding-top: 98px
+  padding-top: 98px
   &__title
-    //margin-bottom: 89px
-    //color: $text-color
-    //font-size: 24px
-    //line-height: 22px
-    //+regular
-    //text-align: center
+    margin-bottom: 89px
+    color: $text-color
+    font-size: 24px
+    line-height: 22px
+    +regular
+    text-align: center
   .slider
-    width: 100%
-    border: 1px solid red
-    //margin-bottom: 71px
-    //padding: 0 91px 0 85px
+    margin-bottom: 71px
+    padding: 0 91px 0 85px
+
+@media(max-width: 922px)
+  .clients
+    padding: 80px 0 80px 0
+    margin-bottom: 0
+    &__title
+      margin-bottom: 60px
+      font-size: 24px
+
+    .slider
+      margin-bottom: 0px
+      padding: 0 20px 0 20px
+
+@media(max-width: 575px)
+  .clients
+    padding: 50px 0 50px 0
+    .slider
+      padding: 0 20px 0 20px

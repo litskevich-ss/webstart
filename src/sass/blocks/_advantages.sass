@@ -1,0 +1,95 @@
+.advantages
+  position: relative
+  background-color: #000000
+  z-index: 0
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-image: url('../img/advantages/advantages-bg.jpg')
+    background-position: top
+    background-size: cover
+    background-repeat: no-repeat
+    z-index: -1
+    opacity: 0.15
+
+  text-align: center
+  &__title
+    display: inline-block
+    margin-top: 108px
+    margin-bottom: 100px
+    padding: 0
+    max-width: 675px
+    color: #ffffff
+    font-size: 24px
+    line-height: 31px
+    +regular
+  .item
+    margin-bottom: 107px
+    width: 250px
+    &__image
+      display: block
+      width: 50px
+      height: 50px
+      margin: auto
+    &__text
+      display: inline-block
+      margin-top: 41px
+      max-width: 243px
+      color: #ffffff
+      font-size: 15px
+      line-height: 20px
+      +light
+    &s
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      flex-wrap: wrap
+
+@media(max-width: 1200px)
+  .advantages
+    .item
+      &__text
+        max-width: 200px
+      &s
+        justify-content: center
+
+@media(max-width: 922px)
+  .advantages
+    padding: 70px 0 30px 0
+    &__title
+      margin-top: 0
+      margin-bottom: 70px
+      font-size: 20px
+    .item
+      margin-bottom: 50px
+
+@media(max-width: 768px)
+  .advantages
+    &__title
+      margin-bottom: 60px
+      padding: 0
+      max-width: 450px
+      font-size: 18px
+    .item
+      margin-bottom: 40px
+      &__text
+        margin-top: 20px
+        font-size: 13px
+
+@media(max-width: 320px)
+  .advantages
+    padding: 30px 0 30px 0
+    &__title
+      margin-bottom: 40px
+      padding: 0
+      max-width: 200px
+      font-size: 14px
+    .item
+      margin-bottom: 40px
+      &__text
+        margin-top: 20px
+        font-size: 13px

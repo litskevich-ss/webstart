@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Изготовление макетов</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 </head>
 
 <body>
@@ -14,23 +15,19 @@
   <header class="hero">
 
     <div class="navbar collapsed">
-
       <div class="container navbar__container">
-
         <div class="burger">
           <div class="toogle-button">
             <span></span>
           </div>
           <span class="title">Меню</span>
         </div>
-
         <ul class="call-me">
           <li><a href="tel:88008913333" class="call-me__text">8 800 891-33-33</a></li>
           <li><a href="#" class="call-me__button modal__button" data-modal-type="modal-1">Заказать обратный звонок</a>
           </li>
         </ul>
-
-        <nav class="nav" role='navigation'>
+        <nav class="nav">
           <ul class="navbar-nav navbar__menu">
             <li class="navbar-nav__item">
               <a class="go_to" href="#service">Главная</a>
@@ -60,46 +57,48 @@
           <!-- /.navbar__menu -->
         </nav>
         <!-- /.nav -->
-
       </div>
       <!-- /.navbar__container -->
-
     </div>
     <!-- /.navbar -->
 
     <div class="container">
       <div class="hero-block">
         <div class="service hero__service">
-          <h2 class="service__title" id="service">Изготовление макетов любой сложности</h2>
+          <h1 class="service__title wow fadeIn" id="service">Изготовление макетов любой сложности</h1>
           <!-- /.service__title -->
-          <span class="service__subtitle">Продажи. Инвестиции. Имидж.</span>
+          <span class="service__subtitle wow fadeIn" data-wow-delay="0.1s">Продажи. Инвестиции. Имидж.</span>
           <!-- /.span service_subtitle -->
           <ul class="service-list">
             <li class="service-list__item">
-              <div class="service-list__image">5</div>
+              <div class="service-list__image wow rollIn" data-wow-delay="0.8s">5</div>
               <!-- /.service-list__image -->
-              <span class="service-list__text">Срок производства от 5 дней</span>
+              <span class="service-list__text wow fadeInDown" data-wow-delay="0.2s">Срок производства от 5 дней</span>
               <!-- /.service-list__text -->
             </li>
             <!-- /.service-list__item -->
             <li class="service-list__item">
-              <div class="service-list__image">24</div>
+              <div class="service-list__image wow rollIn" data-wow-delay="0.8s">24</div>
               <!-- /.service-list__image -->
-              <span class="service-list__text">Гарантия на макеты 24 месяца</span>
+              <span class="service-list__text wow fadeInDown" data-wow-delay="0.3s">Гарантия на макеты 24 месяца</span>
               <!-- /.service-list__text -->
             </li>
             <!-- /.service-list__item -->
             <li class="service-list__item">
-              <div class="service-list__image"><img src="img/hero/sync.svg" alt=""></div>
+              <div class="service-list__image wow rollIn" data-wow-delay="0.8s"><img src="img/hero/sync.svg" alt="">
+              </div>
               <!-- /.service-list__image -->
-              <span class="service-list__text">Проектируем, изготавливаем, доставляем и устанавливаем</span>
+              <span class="service-list__text wow fadeInDown" data-wow-delay="0.4s">Проектируем, изготавливаем,
+                доставляем и устанавливаем</span>
               <!-- /.service-list__text -->
             </li>
             <!-- /.service-list__item -->
             <li class="service-list__item">
-              <div class="service-list__image"><img src="img/hero/map-location.svg" alt=""></div>
+              <div class="service-list__image wow rollIn" data-wow-delay="0.8s"><img src="img/hero/map-location.svg"
+                  alt=""></div>
               <!-- /.service-list__image -->
-              <span class="service-list__text">Застрахуем, доставим и установим</span>
+              <span class="service-list__text wow fadeInDown" data-wow-delay="0.4s">Застрахуем, доставим и
+                установим</span>
               <!-- /.service-list__text -->
             </li>
             <!-- /.service-list__item -->
@@ -108,13 +107,14 @@
         </div>
         <!-- /.service hero__service -->
 
-        <form action="mail.php" method="POST" class="form hero__form" id="request-form">
+        <form action="mail.php" method="POST" class="form hero__form wow fadeInRight" data-wow-delay="0.8s"
+          id="request-form">
           <h2 class="form__title"> Оставьте заявку и получите расчет стоимость макета в течение <strong>30
               минут</strong></h2>
           <!-- /.hero__title -->
           <input type="text" name="user_name" class="input form__input" placeholder="Ваше имя">
           <!-- /.hero__input -->
-          <input type="phone" name="user_phone" class="input form__input phone" placeholder="Контактный телефон">
+          <input type="tel" name="user_phone" class="input form__input phone" placeholder="Контактный телефон">
           <!-- /.hero__input -->
           <input type="email" name="user_email" class="input form__input" placeholder="Электронная почта">
           <!-- /.hero__input -->
@@ -127,18 +127,21 @@
       <!-- /.hero-block -->
     </div>
     <!-- /.container -->
+
   </header>
   <!-- /.hero -->
 
   <main>
+
     <section class="section layouts">
       <div class="container">
-        <h2 class="section-title layouts__title" id="layouts">Виды макетов</h2>
+        <h2 class="section-title layouts__title wow fadeInUp" data-wow-delay="0.1s" id="layouts">Виды макетов</h2>
         <!-- /.section-title layouts__title -->
-        <span class="section-subtitle layouts__subtitle">Создаем макеты от небольших домов до космических станций</span>
+        <span class="section-subtitle layouts__subtitle wow fadeInUp" data-wow-delay="0.3s">Создаем макеты от небольших
+          домов до космических станций</span>
         <!-- /.layouts__subtitle -->
         <div class="cards">
-          <div class="card layouts__card">
+          <div class="card layouts__card wow fadeInUp" data-wow-delay="0.3s">
             <h3 class="card__title">Архитектурные макеты</h3>
             <!-- /.card__title -->
             <div class="card__image"><img src="img/layouts/img-1.jpg" alt="Архитектурные макеты"></div>
@@ -157,7 +160,7 @@
             <!-- /.button card__button -->
           </div>
           <!-- /.card layouts__card -->
-          <div class="card layouts__card">
+          <div class="card layouts__card wow fadeInUp" data-wow-delay="0.6s">
             <h3 class="card__title">Градостроительные макеты</h3>
             <!-- /.card__title -->
             <div class="card__image"><img src="img/layouts/img-2.jpg" alt="Градостроительные макеты"></div>
@@ -175,7 +178,7 @@
             <!-- /.button card__button -->
           </div>
           <!-- /.card layouts__card -->
-          <div class="card layouts__card">
+          <div class="card layouts__card wow fadeInUp" data-wow-delay="0.9s">
             <h3 class="card__title">Промышленные макеты</h3>
             <!-- /.card__title -->
             <div class="card__image"><img src="img/layouts/img-3.jpg" alt="Промышленные макеты"></div>
@@ -194,7 +197,7 @@
             <!-- /.button card__button -->
           </div>
           <!-- /.card layouts__card -->
-          <div class="card layouts__card">
+          <div class="card layouts__card wow fadeInUp" data-wow-delay="0.3s">
             <h3 class="card__title">Интерьерные макеты</h3>
             <!-- /.card__title -->
             <div class="card__image"><img src="img/layouts/img-4.jpg" alt="Интерьерные макеты"></div>
@@ -213,7 +216,7 @@
             <!-- /.button card__button -->
           </div>
           <!-- /.card layouts__card -->
-          <div class="card layouts__card">
+          <div class="card layouts__card wow fadeInUp" data-wow-delay="0.6s">
             <h3 class="card__title">Ландшафтные макеты</h3>
             <!-- /.card__title -->
             <div class="card__image"><img src="img/layouts/img-5.jpg" alt="Ландшафтные макеты"></div>
@@ -231,7 +234,7 @@
             <!-- /.button card__button -->
           </div>
           <!-- /.card layouts__card -->
-          <div class="card layouts__card">
+          <div class="card layouts__card wow fadeInUp" data-wow-delay="0.9s">
             <h3 class="card__title">Индивидуальные макеты</h3>
             <!-- /.card__title -->
             <div class="card__image"><img src="img/layouts/img-6.jpg" alt="Индивидуальные макеты"></div>
@@ -251,16 +254,188 @@
     </section>
     <!-- /.section layouts -->
 
+    <section class="section projects">
+      <div class="container">
+        <h2 class="section-title projects__title decor wow fadeInLeft" id="projects">Реализованные проекты</h2>
+        <!-- /.section-title projects__title -->
+        <span class="section-subtitle projects__subtitle wow fadeInRight">Более 100 компаний уже решают свои бизнес –
+          задачи с помощью наших макетов</span>
+        <!-- /.section-subtitle projects__subtitle -->
+        <div class="slider projects__slider wow fadeInUp">
+          <div class="slider__items">
+            <div>
+              <div class="slider__item">
+                <img class="slider__image" src="img/projects/projects-1.jpg" alt="Проект 1">
+                <div class="project-info">
+                  <div class="project-info__title">Порт Артек</div>
+                  <!-- /.project-info__title -->
+                  <div class="project-info__subtitle">
+                    <span class="caption">Описание:</span> Презентация порта Артек для первых лиц государства
+                  </div>
+                  <!-- /.project-info__subtitle -->
+                  <div class="project-details">
+                    <div class="project-details__item"><span class="caption">Масштаб:</span>1:200</div>
+                    <div class="project-details__item"><span class="caption">Размер:</span>1000х2000</div>
+                    <div class="project-details__item"><span class="caption">Срок изготовления:</span>40 дней</div>
+                  </div>
+                  <!-- /.project-details -->
+                  <button class="button project-info__button modal__button" data-modal-type="modal-4">Заказать
+                    макет</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="slider__item">
+                <img class="slider__image" src="img/projects/projects-2.jpg" alt="Проект 2">
+                <div class="project-info">
+                  <div class="project-info__title">Загородный дом</div>
+                  <!-- /.project-info__title -->
+                  <div class="project-info__subtitle">
+                    <span class="caption">Описание:</span> Презентация загородного дома
+                  </div>
+                  <!-- /.project-info__subtitle -->
+                  <div class="project-details">
+                    <div class="project-details__item"><span class="caption">Масштаб:</span>1:200</div>
+                    <div class="project-details__item"><span class="caption">Размер::</span>500х1000</div>
+                    <div class="project-details__item"><span class="caption">Срок изготовления:</span>5 дней</div>
+                  </div>
+                  <!-- /.project-details -->
+                  <button class="button project-info__button modal__button" data-modal-type="modal-4">Заказать
+                    макет</button>
+                </div>
+                <!-- /.project-info -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.slider -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section projects -->
+
+    <section class="section advantages">
+      <div class="container">
+        <h3 class="section-title advantages__title wow fadeInUp" id="advantages">Все макеты, изготовленные нашей
+          макетной мастерской,
+          помогли клиентам
+          выполнить поставленные цели, а именно:</h3>
+        <!-- /.section-title advantages__title -->
+        <div class="items">
+          <div class="item advantages__item wow fadeInUp" data-wow-delay="0.1s">
+            <div class="item__image"><img class="advantages__image" src="img/advantages/sale.png" alt=""></div>
+            <!-- /.advantages__image -->
+            <span class="item__text">Продать квартиру, дом, участок, объект.</span>
+            <!-- /.advantages__text -->
+          </div>
+          <!-- /.advantages__item -->
+          <div class="item advantages__item wow fadeInUp" data-wow-delay="0.2s">
+            <div class="item__image"><img class="advantages__image" src="img/advantages/change.png" alt=""></div>
+            <!-- /.advantages__image -->
+            <span class="item__text">Привлечь инвестиции в проект.</span>
+            <!-- /.advantages__text -->
+          </div>
+          <!-- /.advantages__item -->
+          <div class="item advantages__item wow fadeInUp" data-wow-delay="0.3s">
+            <div class="item__image"><img class="advantages__image" src="img/advantages/park.png" alt=""></div>
+            <!-- /.advantages__image -->
+            <span class="item__text">Наглядно представить объект посетителю с целью ознакомления с территорией,
+              зданием.</span>
+            <!-- /.advantages__text -->
+          </div>
+          <!-- /.advantages__item -->
+          <div class="item advantages__item wow fadeInUp" data-wow-delay="0.4s">
+            <div class="item__image"><img class="advantages__image" src="img/advantages/worldwide.png" alt=""></div>
+            <!-- /.advantages__image -->
+            <span class="item__text">Представить проект первым лицам государства, компании.</span>
+            <!-- /.advantages__text -->
+          </div>
+          <!-- /.advantages__item -->
+          <div class="item advantages__item wow fadeInUp" data-wow-delay="0.5s">
+            <div class="item__image"><img class="advantages__image" src="img/advantages/lesson.png" alt=""> </div>
+            <!-- /.advantages__image -->
+            <span class="item__text">Обучение сотрудников, военнослужащих, студентов и т.д.</span>
+            <!-- /.advantages__text -->
+          </div>
+          <!-- /.advantages__item -->
+          <div class="item advantages__item wow fadeInUp" data-wow-delay="0.6s">
+            <div class="item__image"><img class="advantages__image" src="img/advantages/document.png" alt=""></div>
+            <!-- /.advantages__image -->
+            <span class="item__text">Получить разрешение на строительство, согласование проекта.</span>
+            <!-- /.advantages__text -->
+          </div>
+          <!-- /.advantages__item -->
+          <div class="item advantages__item wow fadeInUp" data-wow-delay="0.7s">
+            <div class="item__image"><img class="advantages__image" src="img/advantages/gift.png" alt=""></div>
+            <!-- /.advantages__image -->
+            <span class="item__text">Бизнес подарок.</span>
+            <!-- /.advantages__text -->
+          </div>
+          <!-- /.advantages__item -->
+          <div class="item advantages__item wow fadeInUp" data-wow-delay="0.8s">
+            <div class="item__image"><img class="advantages__image" src="img/advantages/table.png" alt=""></div>
+            <!-- /.advantages__image -->
+            <span class="item__text">Дополнить интерьер.</span>
+            <!-- /.advantages__text -->
+          </div>
+          <!-- /.advantages__item -->
+        </div>
+        <!-- /.items -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section advantages -->
+
+    <section class="section clients">
+      <div class="container">
+        <h2 class="section-title clients__title wow fadeInUp" data-wow-delay="0.3s" id="clients">Наши клиенты</h2>
+        <div class="slider projects__slider wow fadeInUp" data-wow-delay="0.5s">
+          <div class="slider__items">
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/gazprom.jpg" width="167" height="37" alt="ГАЗПРОМБАНК">
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/alphabank.jpg" width="160" height="48" alt="Алфа-Банк">
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/moscow.jpg" width="136" height="68"
+                alt="Жилой комплекс 'МОСКВА'">
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/vtb.jpg" width="170" height="66" alt="ВТБ 24">
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/lada.jpg" width="147" height="67" alt="ЛАДА">
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/gazprom.jpg" width="167" height="37" alt="ГАЗПРОМБАНК">
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/alphabank.jpg" width="160" height="48" alt="Алфа-Банк">
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/moscow.jpg" width="136" height="68"
+                alt="Жилой комплекс 'МОСКВА'">
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/vtb.jpg" width="170" height="66" alt="ВТБ 24">
+            </div>
+            <div class="slider__item">
+              <img class="slider__image" src="img/clients/lada.jpg" width="147" height="67" alt="ЛАДА">
+            </div>
+          </div>
+        </div>
+        <!-- /.slider -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section clients -->
+
   </main>
 
-
   <footer class="footer">
-    <a name="footer"></a>
-
     <div class="footer__map" id="map"></div>
-
     <div class="container">
-
       <div class="footer__contacts">
         <div class="footer__address" id="contacts">
           <img src="img/footer/placeholder.svg" alt="">
@@ -268,9 +443,10 @@
           Автомоторная улица, 4А, стр.21
         </div>
         <!-- /.footer__addess -->
-        <ul class="call-me footer__call-me">
+        <ul class="call-me footer__call-me wow pulse animated" data-wow-delay="2s" data-wow-iteration="infinite"
+          data-wow-duration="2s">
           <li><a href="tel:88008913333" class="call-me__text">8 800 891-33-33</a></li>
-          <li><a href="#footer" class="call-me__button modal__button" data-modal-type="modal-1">Заказать обратный
+          <li><a href="#" class="call-me__button modal__button" data-modal-type="modal-1">Заказать обратный
               звонок</a></li>
         </ul>
         <!-- /.phone footer__phone -->
@@ -278,23 +454,21 @@
       <!-- /.footer__contacts -->
     </div>
     <!-- /.container -->
-
   </footer>
 
-
   <div class="modal" id="modal">
-    <div class="modal-dialog call__dialog">
+    <div class="modal-dialog call__dialog wow zoomIn">
       <button class="modal-dialog__close button" id="close">&times;</button>
-      <h4 class="modal-dialog__title">Заказать звонок</h4>
+      <h3 class="modal-dialog__title">Заказать звонок</h3>
 
       <form action="mail.php" method="POST" class="form modal__form" id="modal-form">
         <input type="text" name="user_name" class="input form__input" placeholder="Ваше имя">
 
-        <input type="phone" name="user_phone" class="input form__input phone" placeholder="Контактный телефон">
+        <input type="tel" name="user_phone" class="input form__input phone" placeholder="Контактный телефон">
 
         <input type="email" name="user_email" class="input form__input" placeholder="Электронная почта">
 
-        <button class="button form__button accept__button" data="msg-1">Оставить заявку</button>
+        <button class="button form__button accept__button">Оставить заявку</button>
 
       </form>
 
@@ -307,24 +481,36 @@
     <img class="img" src="img/to-top.svg" alt="">
   </div>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=b6e1ca19-72ee-44aa-8650-0036175e5276&lang=ru_RU"
-    type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=b6e1ca19-72ee-44aa-8650-0036175e5276&lang=ru_RU"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Yandex.Metrika counter -->
   <script>
-
-  $(document).ready(function () {
-
-    
-
-  });
-
-    
-
-  </script>
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+        a)
+    })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+    ym(52790344, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+      trackHash: true
+    });
+  </script> <noscript>
+    <div><img src="https://mc.yandex.ru/watch/52790344" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 
 </body>
 

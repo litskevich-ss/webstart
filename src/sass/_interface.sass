@@ -6,12 +6,12 @@ body
 * 
   box-sizing: border-box
 
-h1, h2, h3,ul, li
+h1, h2, h3, h4, ul, li
   margin: 0
   padding: 0
 
-//img
-  //width: 100%
+img
+  width: 100%
 
 .button
   padding: 5px 15px
@@ -42,7 +42,6 @@ h1, h2, h3,ul, li
     font-size: 13px
     +light
 
-.input
   &.invalid
     margin-bottom: 0
     border: 1px solid #e13e42
@@ -88,7 +87,6 @@ div.invalid
   padding-right: 15px
   margin-left: auto
   margin-right: auto
-
 
 .call-me
   display: flex
@@ -156,6 +154,38 @@ div.invalid
     +light
     color: #ffffff
 
+.slick-slide
+  margin: 0 10px
+
+.slick-list
+  margin: 0 -30px
+  
+.prev, .next
+  height: 26px
+  width: 26px
+  outline: none
+  opacity: 0.5
+  &:hover
+    opacity: 0.3
+
+.slider
+  img 
+    margin: 0
+    padding: 0
+    display: block
+    outline: none
+    height: 100%
+
+.decor
+  &:before
+    position: absolute
+    left: 50%
+    margin-top: 50px
+    transform: translateX(-50%)
+    width: 31px
+    height: 2px
+    background-color: $main-color
+    content: ''
 
   @media(max-width: 768px)
     .section
@@ -163,3 +193,6 @@ div.invalid
     
     .thank-you
       width: 90%
+
+
+    

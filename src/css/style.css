@@ -394,9 +394,13 @@ body {
           box-sizing: border-box;
 }
 
-h1, h2, h3, ul, li {
+h1, h2, h3, h4, ul, li {
   margin: 0;
   padding: 0;
+}
+
+img {
+  width: 100%;
 }
 
 .button {
@@ -642,13 +646,630 @@ div.invalid {
   color: #ffffff;
 }
 
+.slick-slide {
+  margin: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -30px;
+}
+
+.prev, .next {
+  height: 26px;
+  width: 26px;
+  outline: none;
+  opacity: 0.5;
+}
+
+.prev:hover, .next:hover {
+  opacity: 0.3;
+}
+
+.slider img {
+  margin: 0;
+  padding: 0;
+  display: block;
+  outline: none;
+  height: 100%;
+}
+
+.decor:before {
+  position: absolute;
+  left: 50%;
+  margin-top: 50px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 31px;
+  height: 2px;
+  background-color: #22bac1;
+  content: '';
+}
+
 @media (max-width: 768px) {
-  .thank-you .section {
+  .decor .section {
     padding: 50px 0 50px 0;
   }
-  .thank-you .thank-you {
+  .decor .thank-you {
     width: 90%;
   }
+}
+
+/* Подключаем стили слайдера */
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+
+.slick-prev:before {
+  content: "←";
+}
+
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+
+.slick-next:before {
+  content: "→";
+}
+
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+
+/* Подключаем стили анимации */
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.animated.delay-1s {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.animated.delay-2s {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.animated.delay-3s {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.animated.delay-4s {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.animated.delay-5s {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.animated.fast {
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+}
+
+.animated.faster {
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+}
+
+.animated.slow {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.animated.slower {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@media (print), (prefers-reduced-motion) {
+  .animated {
+    -webkit-animation: unset !important;
+            animation: unset !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes rollIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+            transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+            transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.rollIn {
+  -webkit-animation-name: rollIn;
+          animation-name: rollIn;
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
 }
 
 /* Подключаем общие стили для модального окна */
@@ -677,6 +1298,7 @@ div.invalid {
 
 .modal-dialog__title {
   margin-top: 50px;
+  margin-bottom: 28px;
   font-size: 18px;
   font-family: 'Proxima Nova Bold', sans-serif;
   font-weight: 700;
@@ -700,9 +1322,8 @@ div.invalid {
 
 @media (max-width: 768px) {
   .modal-dialog {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .modal__form {
     min-width: 100%;
@@ -714,6 +1335,25 @@ div.invalid {
   .modal .form__button {
     margin-left: 50px;
     margin-right: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .modal-dialog {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+  }
+  .modal__form {
+    min-width: 100%;
+  }
+  .modal .form__input {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .modal .form__button {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
@@ -914,7 +1554,7 @@ div.invalid {
   margin-left: auto;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .navbar {
     background-color: none;
     background: none;
@@ -1000,6 +1640,26 @@ div.invalid {
   }
   .navbar .call-me__text {
     color: #ffffff;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar .call-me {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    display: block;
+    margin-right: 0;
+    padding: 0;
+  }
+  .navbar .call-me__text {
+    font-size: 15px;
+  }
+  .navbar .call-me__button {
+    font-size: 12px;
+  }
+  .navbar .call-me__button:after {
+    width: 150px;
   }
 }
 
@@ -1159,21 +1819,28 @@ div.invalid {
             flex-direction: column;
   }
   .hero__form {
-    margin-top: 30px;
     margin-bottom: 15px;
-    width: 100%;
+    margin: 50px auto;
+  }
+  .hero .service {
+    margin: 0 auto;
   }
   .hero .service__title {
-    margin-top: 60px;
+    text-align: center;
+    margin-top: 50px;
     margin-bottom: 30px;
-    font-size: 48px;
+    max-width: 500px;
+    font-size: 40px;
   }
   .hero .service__subtitle {
+    display: block;
+    text-align: center;
     font-size: 20px;
   }
   .hero .service-list {
-    margin-top: 62px;
-    margin-bottom: 0;
+    display: block;
+    width: 300px;
+    margin: 62px auto 0 auto;
   }
   .hero .service-list__item {
     margin-bottom: 23px;
@@ -1183,6 +1850,16 @@ div.invalid {
   }
   .hero .service-list__text {
     font-size: 15px;
+  }
+  .hero .form__button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+  }
+  .hero .form__input {
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
   }
   .hero .form__button {
     margin-left: auto;
@@ -1196,49 +1873,105 @@ div.invalid {
   }
 }
 
-@media (max-width: 768px) {
-  .hero-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+@media (max-width: 575px) {
+  .hero__form {
+    margin-bottom: 15px;
+    margin: 0 auto 50px auto;
   }
   .hero .service {
-    margin-left: 30px;
+    margin: 0;
+    padding: 0;
+    margin: 30px auto;
   }
   .hero .service__title {
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 30px;
-    font-size: 24px;
     max-width: 350px;
-    line-height: 1.2;
+    padding: 0;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: 'Proxima Nova Regular', sans-serif;
+    font-weight: 400;
   }
   .hero .service__subtitle {
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
   }
   .hero .service-list {
-    margin-top: 40px;
-    margin-bottom: 0;
-    margin-left: 15px;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .hero .service-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 23px;
   }
   .hero .service-list__image {
-    font-size: 16px;
+    margin-right: 15px;
   }
   .hero .service-list__text {
-    font-size: 15px;
-  }
-  .hero .form {
-    padding-left: 55px;
-    padding-right: 55px;
+    font-size: 13px;
   }
   .hero .form__button {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__form {
+    margin-bottom: 15px;
     width: 100%;
   }
-  .hero .form__input {
-    width: 100%;
+  .hero .service {
+    margin: 0;
+    padding: 0;
+    margin: 30px auto;
+  }
+  .hero .service__title {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 300px;
+    padding: 0;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: 'Proxima Nova Regular', sans-serif;
+    font-weight: 400;
+  }
+  .hero .service__subtitle {
+    font-size: 18px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
+  }
+  .hero .service-list {
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .hero .service-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 23px;
+  }
+  .hero .service-list__image {
+    margin-right: 15px;
+  }
+  .hero .service-list__text {
+    font-size: 13px;
+  }
+  .hero .form__button {
+    padding: 25px 20px;
   }
 }
 
@@ -1412,7 +2145,7 @@ div.invalid {
   opacity: 1;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .layouts .card {
     margin-right: 30px;
   }
@@ -1431,24 +2164,13 @@ div.invalid {
 
 @media (max-width: 922px) {
   .layouts .card {
-    margin-right: 0;
-    width: 100%;
     height: auto;
     min-height: auto;
-  }
-  .layouts .card:nth-child(3n) {
-    margin-right: 0;
-  }
-  .layouts .card:nth-child(2n) {
-    margin-right: 0;
   }
   .layouts .card__button {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .layouts .card img {
-    width: 70%;
   }
 }
 
@@ -1464,6 +2186,10 @@ div.invalid {
     margin-bottom: 40px;
     font-size: 18px;
   }
+  .layouts .card {
+    margin-right: 0;
+    margin-left: 0;
+  }
   .layouts .card__title {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -1471,9 +2197,6 @@ div.invalid {
   }
   .layouts .card__button {
     margin-bottom: 40px;
-  }
-  .layouts .card img {
-    width: 80%;
   }
 }
 
@@ -1511,10 +2234,675 @@ div.invalid {
 }
 
 /* Подключаем стили для секции projects */
-/* Подключаем стили для секции сдшутеы */
-.clients .slider {
+.projects {
+  padding: 90px 0 90px 0;
+  text-align: center;
+  background-color: rgba(232, 232, 232, 0.4);
+}
+
+.projects__title {
+  margin-bottom: 64px;
+  color: #000000;
+  font-size: 36px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+}
+
+.projects__subtitle {
+  display: inline-block;
+  max-width: 760px;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+}
+
+.projects__slider {
+  margin-top: 96px;
+  margin-bottom: 10px;
+}
+
+.projects .slider {
+  padding: 0 20px 0 20px;
+  text-align: left;
+}
+
+.projects .slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 340px;
+}
+
+.projects .slider__image {
+  max-width: 409px;
+  margin-right: 43px;
+}
+
+.projects .slider .project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
   width: 100%;
-  border: 1px solid red;
+  margin-left: 43px;
+}
+
+.projects .slider .project-info__title {
+  margin-bottom: 46px;
+  color: #000000;
+  font-size: 24px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+}
+
+.projects .slider .project-info__subtitle {
+  display: inline-block;
+  max-width: 402px;
+  color: #000000;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+}
+
+.projects .slider .project-info__subtitle .caption {
+  display: block;
+  margin-bottom: 7px;
+  color: #7f7f7f;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+}
+
+.projects .slider .project-info__button {
+  margin-top: auto;
+  width: 216px;
+  padding: 26px 48px 25px 51px;
+  font-size: 13px;
+  letter-spacing: 0.33px;
+  background-color: #22bac1;
+  z-index: 5000;
+}
+
+.projects .slider .project-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 53px;
+}
+
+.projects .slider .project-details__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 10px;
+  color: #000000;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+}
+
+.projects .slider .project-details__item:last-child {
+  margin-right: 0;
+}
+
+.projects .slider .project-details__item .caption {
+  margin-bottom: 7px;
+  color: #7f7f7f;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+}
+
+.projects .slider .slick-slide {
+  margin: 0 120px;
+}
+
+.projects .slider .slick-list {
+  margin: 0 -10px;
+}
+
+@media (max-width: 1024px) {
+  .projects {
+    padding: 60px 0 60px 0;
+  }
+  .projects__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+  .projects__subtitle {
+    display: inline-block;
+    max-width: 650px;
+    font-size: 20px;
+  }
+  .projects__slider {
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+  .projects .slider {
+    padding: 0 50px 0 50px;
+    text-align: left;
+  }
+  .projects .slider__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 100%;
+  }
+  .projects .slider__image {
+    max-width: 409px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 0;
+  }
+  .projects .slider .project-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-left: 0;
+    max-width: 409px;
+    min-height: 340px;
+  }
+  .projects .slider .project-info__title {
+    margin-top: 40px;
+    margin-bottom: 46px;
+    color: #000000;
+    font-size: 24px;
+    font-family: 'Proxima Nova Regular', sans-serif;
+    font-weight: 400;
+  }
+  .projects .slider .project-info__subtitle {
+    display: inline-block;
+    max-width: 402px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
+  }
+  .projects .slider .project-info__subtitle .caption {
+    display: block;
+    margin-bottom: 7px;
+    color: #7f7f7f;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
+  }
+  .projects .slider .project-info__button {
+    margin-top: auto;
+    width: 216px;
+    padding: 26px 48px 25px 51px;
+    font-size: 13px;
+    letter-spacing: 0.33px;
+    background-color: #22bac1;
+    z-index: 5000;
+  }
+  .projects .slider .project-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 53px;
+  }
+  .projects .slider .project-details__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 10px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
+  }
+  .projects .slider .project-details__item:last-child {
+    margin-right: 0;
+  }
+  .projects .slider .project-details__item .caption {
+    margin-bottom: 7px;
+    color: #7f7f7f;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
+  }
+  .projects .slider .slick-slide {
+    margin: 0 10px;
+  }
+  .projects .slider .slick-list {
+    margin: 0 -10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .projects {
+    padding: 50px 0 50px 0;
+  }
+  .projects__title {
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    font-size: 30px;
+  }
+  .projects__subtitle {
+    display: inline-block;
+    max-width: 200px;
+    font-size: 20px;
+  }
+  .projects__slider {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .projects .decor:before {
+    margin-top: 80px;
+  }
+  .projects .slider {
+    padding: 0 20px 0 20px;
+    text-align: left;
+  }
+  .projects .slider__item {
+    height: 100%;
+  }
+  .projects .slider__image {
+    max-width: 409px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 0;
+  }
+  .projects .slider .project-info {
+    margin-left: 0;
+    max-width: 409px;
+  }
+  .projects .slider .project-info__title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    font-family: 'Proxima Nova Regular', sans-serif;
+    font-weight: 400;
+  }
+  .projects .slider .project-info__subtitle {
+    display: inline-block;
+    max-width: 402px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
+  }
+  .projects .slider .project-info__subtitle .caption {
+    display: block;
+    margin-bottom: 7px;
+    color: #7f7f7f;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
+  }
+  .projects .slider .project-info__button {
+    margin-top: auto;
+    width: 100%;
+    padding: 26px 48px 25px 51px;
+    font-size: 13px;
+    letter-spacing: 0.33px;
+    background-color: #22bac1;
+    z-index: 5000;
+  }
+  .projects .slider .project-details {
+    margin-top: 30px;
+  }
+  .projects .slider .project-details__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 10px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
+  }
+  .projects .slider .project-details__item:last-child {
+    margin-right: 0;
+  }
+  .projects .slider .project-details__item .caption {
+    margin-bottom: 7px;
+    color: #7f7f7f;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Proxima Nova Light', sans-serif;
+    font-weight: 300;
+  }
+  .projects .slider .slick-slide {
+    margin: 0 10px;
+  }
+  .projects .slider .slick-list {
+    margin: 0 -10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .projects {
+    padding: 40px 0 10px 0;
+  }
+  .projects__title {
+    margin-bottom: 50px;
+    font-size: 28px;
+  }
+  .projects__subtitle {
+    max-width: 760px;
+    font-size: 18px;
+  }
+  .projects__slider {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .projects .decor:before {
+    margin-top: 70px;
+  }
+  .projects .slider {
+    padding: 0 20px 0 20px;
+  }
+  .projects .slider__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 100%;
+  }
+  .projects .slider__image {
+    max-width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 0;
+  }
+  .projects .slider .project-info {
+    margin-left: 0;
+    max-width: 409px;
+  }
+  .projects .slider .project-info__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .projects .slider .project-info__subtitle {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .projects .slider .project-info__subtitle .caption {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .projects .slider .project-info__button {
+    margin-top: auto;
+    width: 100%;
+    padding: 26px 48px 25px 51px;
+    font-size: 13px;
+  }
+  .projects .slider .project-details {
+    margin-top: 30px;
+  }
+  .projects .slider .project-details__item {
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .projects .slider .project-details__item:last-child {
+    margin-right: 0;
+  }
+  .projects .slider .project-details__item .caption {
+    margin-bottom: 7px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+/* Подключаем стили для секции advantages */
+.advantages {
+  position: relative;
+  background-color: #000000;
+  z-index: 0;
+  text-align: center;
+}
+
+.advantages:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/advantages/advantages-bg.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.advantages__title {
+  display: inline-block;
+  margin-top: 108px;
+  margin-bottom: 100px;
+  padding: 0;
+  max-width: 675px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 31px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+}
+
+.advantages .item {
+  margin-bottom: 107px;
+  width: 250px;
+}
+
+.advantages .item__image {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+.advantages .item__text {
+  display: inline-block;
+  margin-top: 41px;
+  max-width: 243px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-weight: 300;
+}
+
+.advantages .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+  .advantages .item__text {
+    max-width: 200px;
+  }
+  .advantages .items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 922px) {
+  .advantages {
+    padding: 70px 0 30px 0;
+  }
+  .advantages__title {
+    margin-top: 0;
+    margin-bottom: 70px;
+    font-size: 20px;
+  }
+  .advantages .item {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages__title {
+    margin-bottom: 60px;
+    padding: 0;
+    max-width: 450px;
+    font-size: 18px;
+  }
+  .advantages .item {
+    margin-bottom: 40px;
+  }
+  .advantages .item__text {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .advantages {
+    padding: 30px 0 30px 0;
+  }
+  .advantages__title {
+    margin-bottom: 40px;
+    padding: 0;
+    max-width: 200px;
+    font-size: 14px;
+  }
+  .advantages .item {
+    margin-bottom: 40px;
+  }
+  .advantages .item__text {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+}
+
+/* Подключаем стили для секции сдшутеы */
+.clients {
+  padding-top: 98px;
+}
+
+.clients__title {
+  margin-bottom: 89px;
+  color: #000000;
+  font-size: 24px;
+  line-height: 22px;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.clients .slider {
+  margin-bottom: 71px;
+  padding: 0 91px 0 85px;
+}
+
+@media (max-width: 922px) {
+  .clients {
+    padding: 80px 0 80px 0;
+    margin-bottom: 0;
+  }
+  .clients__title {
+    margin-bottom: 60px;
+    font-size: 24px;
+  }
+  .clients .slider {
+    margin-bottom: 0px;
+    padding: 0 20px 0 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .clients {
+    padding: 50px 0 50px 0;
+  }
+  .clients .slider {
+    padding: 0 20px 0 20px;
+  }
 }
 
 /* Подключаем стили для секции footer */
